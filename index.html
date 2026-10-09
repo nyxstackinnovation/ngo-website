@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sahayata Foundation — Empowering communities through education, nutrition, and healthcare. Join us in making a difference across India.">
+  <meta name="keywords" content="NGO, nonprofit, charity, donate, volunteer, India, education, healthcare, community">
+  <meta name="author" content="Sahayata Foundation">
+  <meta name="theme-color" content="#176B45">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Sahayata Foundation — Empowering Communities">
+  <meta property="og:description" content="Join Sahayata Foundation in transforming lives through education, nutrition, and healthcare programs across India.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sahayatafoundation.org">
+
+  <title>Sahayata Foundation — Empowering Communities Across India</title>
+
+  <!-- Fonts preload -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages/home.css">
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Sahayata Foundation Home">
+        <span class="header__logo-icon">🌿</span>
+        <span>Sahayata</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link is-active">Home</a></li>
+          <li><a href="about.html" class="nav__link">About Us</a></li>
+          <li><a href="donate.html" class="nav__link">Donate</a></li>
+          <li><a href="volunteer.html" class="nav__link">Volunteer</a></li>
+          <li><a href="membership.html" class="nav__link">Membership</a></li>
+          <li><a href="donate.html" class="nav__link nav__cta btn btn--accent btn--sm">Donate Now</a></li>
+        </ul>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-shapes">
+        <div class="hero__shape hero__shape--1"></div>
+        <div class="hero__shape hero__shape--2"></div>
+        <div class="hero__shape hero__shape--3"></div>
+      </div>
+      <div class="container hero__content">
+        <div class="hero__text">
+          <span class="hero__badge">
+            <span class="hero__badge-dot"></span>
+            Making an impact since 2015
+          </span>
+          <h1 class="hero__title">
+            Empowering <span class="hero__highlight">Communities</span>,
+            Transforming <span class="hero__highlight hero__highlight--gold">Lives</span>
+          </h1>
+          <p class="hero__subtitle">
+            Sahayata Foundation works across India to provide quality education, nutritious meals, 
+            and essential healthcare to those who need it most. Together, we build brighter futures.
+          </p>
+          <div class="hero__actions">
+            <a href="donate.html" class="btn btn--accent btn--lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              Donate Now
+            </a>
+            <a href="volunteer.html" class="btn btn--secondary btn--lg">
+              Join as Volunteer
+            </a>
+          </div>
+        </div>
+        <div class="hero__visual">
+          <div class="hero__image-frame">
+            <div class="hero__image-placeholder">
+              <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1" stroke-linecap="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+              <p>NGO Hero Image</p>
+              <span>Replace with your official photo</span>
+            </div>
+          </div>
+          <div class="hero__stat-card hero__stat-card--1 fade-in">
+            <span class="hero__stat-icon">🎓</span>
+            <div>
+              <strong data-count="15000" data-suffix="+">0</strong>
+              <span>Students Educated</span>
+            </div>
+          </div>
+          <div class="hero__stat-card hero__stat-card--2 fade-in" data-delay="1">
+            <span class="hero__stat-icon">🍲</span>
+            <div>
+              <strong data-count="50000" data-suffix="+">0</strong>
+              <span>Meals Served</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ IMPACT STATS ============ -->
+    <section class="stats section--sm" id="impact">
+      <div class="container">
+        <div class="stats__grid">
+          <div class="stats__item fade-in">
+            <div class="stats__number" data-count="15000" data-suffix="+">0</div>
+            <div class="stats__label">Children Educated</div>
+          </div>
+          <div class="stats__item fade-in" data-delay="1">
+            <div class="stats__number" data-count="50000" data-suffix="+">0</div>
+            <div class="stats__label">Meals Served</div>
+          </div>
+          <div class="stats__item fade-in" data-delay="2">
+            <div class="stats__number" data-count="200" data-suffix="+">0</div>
+            <div class="stats__label">Villages Reached</div>
+          </div>
+          <div class="stats__item fade-in" data-delay="3">
+            <div class="stats__number" data-count="5000" data-suffix="+">0</div>
+            <div class="stats__label">Volunteers</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHAT WE DO ============ -->
+    <section class="section campaigns" id="campaigns">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-header__badge">🎯 Our Focus Areas</span>
+          <h2 class="section-header__title">Building Stronger Communities</h2>
+          <p class="section-header__subtitle">
+            We run targeted campaigns across education, nutrition, healthcare, and women's empowerment 
+            to create lasting change in underserved communities.
+          </p>
+        </div>
+
+        <div class="campaigns__grid">
+          <div class="campaign-card card fade-in">
+            <div class="campaign-card__icon" style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9);">
+              <span>🎓</span>
+            </div>
+            <h3 class="campaign-card__title">Education for All</h3>
+            <p class="campaign-card__desc">
+              Providing quality education, school supplies, and scholarships to underprivileged children across rural India.
+            </p>
+            <div class="campaign-card__progress">
+              <div class="campaign-card__bar">
+                <div class="campaign-card__fill" style="width: 72%;"></div>
+              </div>
+              <div class="campaign-card__meta">
+                <span>₹7,20,000 raised</span>
+                <span>₹10,00,000 goal</span>
+              </div>
+            </div>
+            <a href="donate.html#education" class="btn btn--primary btn--sm btn--full">Donate to This Cause</a>
+          </div>
+
+          <div class="campaign-card card fade-in" data-delay="1">
+            <div class="campaign-card__icon" style="background: linear-gradient(135deg, #fff3e0, #ffe0b2);">
+              <span>🍲</span>
+            </div>
+            <h3 class="campaign-card__title">Zero Hunger Mission</h3>
+            <p class="campaign-card__desc">
+              Distributing nutritious meals and setting up community kitchens to fight malnutrition and hunger.
+            </p>
+            <div class="campaign-card__progress">
+              <div class="campaign-card__bar">
+                <div class="campaign-card__fill" style="width: 58%; background: var(--accent);"></div>
+              </div>
+              <div class="campaign-card__meta">
+                <span>₹4,35,000 raised</span>
+                <span>₹7,50,000 goal</span>
+              </div>
+            </div>
+            <a href="donate.html#food" class="btn btn--primary btn--sm btn--full">Donate to This Cause</a>
+          </div>
+
+          <div class="campaign-card card fade-in" data-delay="2">
+            <div class="campaign-card__icon" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);">
+              <span>🏥</span>
+            </div>
+            <h3 class="campaign-card__title">Healthcare Access</h3>
+            <p class="campaign-card__desc">
+              Organizing health camps, providing medicines, and enabling access to quality healthcare in remote areas.
+            </p>
+            <div class="campaign-card__progress">
+              <div class="campaign-card__bar">
+                <div class="campaign-card__fill" style="width: 45%; background: #2178b5;"></div>
+              </div>
+              <div class="campaign-card__meta">
+                <span>₹3,60,000 raised</span>
+                <span>₹8,00,000 goal</span>
+              </div>
+            </div>
+            <a href="donate.html#medical" class="btn btn--primary btn--sm btn--full">Donate to This Cause</a>
+          </div>
+
+          <div class="campaign-card card fade-in" data-delay="3">
+            <div class="campaign-card__icon" style="background: linear-gradient(135deg, #fce4ec, #f8bbd0);">
+              <span>👩‍💼</span>
+            </div>
+            <h3 class="campaign-card__title">Women Empowerment</h3>
+            <p class="campaign-card__desc">
+              Skill development, micro-finance support, and vocational training to empower women in rural areas.
+            </p>
+            <div class="campaign-card__progress">
+              <div class="campaign-card__bar">
+                <div class="campaign-card__fill" style="width: 35%; background: #c2185b;"></div>
+              </div>
+              <div class="campaign-card__meta">
+                <span>₹1,75,000 raised</span>
+                <span>₹5,00,000 goal</span>
+              </div>
+            </div>
+            <a href="donate.html#women" class="btn btn--primary btn--sm btn--full">Donate to This Cause</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW YOU CAN HELP ============ -->
+    <section class="section help-section" id="help">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-header__badge">🤝 Get Involved</span>
+          <h2 class="section-header__title">How You Can Make a Difference</h2>
+          <p class="section-header__subtitle">
+            Whether through donations, volunteering, or becoming a member — every action creates ripples of change.
+          </p>
+        </div>
+
+        <div class="help__grid">
+          <div class="help-card fade-in">
+            <div class="help-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <h3 class="help-card__title">Donate</h3>
+            <p class="help-card__desc">Your contribution directly funds education, food, and medical supplies for those in need.</p>
+            <a href="donate.html" class="btn btn--accent btn--sm">Donate Now →</a>
+          </div>
+          <div class="help-card fade-in" data-delay="1">
+            <div class="help-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 class="help-card__title">Volunteer</h3>
+            <p class="help-card__desc">Join our ground team or contribute your skills remotely. Every hand counts.</p>
+            <a href="volunteer.html" class="btn btn--primary btn--sm">Register Now →</a>
+          </div>
+          <div class="help-card fade-in" data-delay="2">
+            <div class="help-card__icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            </div>
+            <h3 class="help-card__title">Become a Member</h3>
+            <p class="help-card__desc">Get exclusive updates, participate in events, and be part of our extended family.</p>
+            <a href="membership.html" class="btn btn--primary btn--sm">Join Now →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-header__badge">💬 Voices of Change</span>
+          <h2 class="section-header__title">Stories From the Ground</h2>
+        </div>
+
+        <div class="testimonials__grid">
+          <div class="testimonial-card card fade-in">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <blockquote class="testimonial-card__quote">
+              "Sahayata Foundation's education program changed my daughter's life. She's now the first in our village to attend college."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">RS</div>
+              <div>
+                <strong>Ravi Sharma</strong>
+                <span>Parent, Rajasthan</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card card fade-in" data-delay="1">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <blockquote class="testimonial-card__quote">
+              "Volunteering with Sahayata has been the most fulfilling experience. The team is passionate, transparent, and truly makes an impact."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">PM</div>
+              <div>
+                <strong>Priya Mehta</strong>
+                <span>Volunteer, Mumbai</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card card fade-in" data-delay="2">
+            <div class="testimonial-card__stars">★★★★★</div>
+            <blockquote class="testimonial-card__quote">
+              "The health camp in our village provided free check-ups for over 300 people. We are so grateful for their consistent efforts."
+            </blockquote>
+            <div class="testimonial-card__author">
+              <div class="testimonial-card__avatar">AK</div>
+              <div>
+                <strong>Anita Kumari</strong>
+                <span>Beneficiary, Bihar</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BANNER ============ -->
+    <section class="cta-banner" id="cta">
+      <div class="container">
+        <div class="cta-banner__content fade-in">
+          <h2 class="cta-banner__title">Ready to Make a Difference?</h2>
+          <p class="cta-banner__subtitle">
+            Every rupee donated, every hour volunteered, every voice raised — 
+            it all adds up to real, tangible change in someone's life.
+          </p>
+          <div class="cta-banner__actions">
+            <a href="donate.html" class="btn btn--accent btn--lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              Donate Now
+            </a>
+            <a href="volunteer.html" class="btn btn--secondary btn--lg" style="border-color: white; color: white;">
+              Volunteer With Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name">
+            <span>🌿</span> Sahayata Foundation
+          </div>
+          <p>
+            A registered non-profit organization dedicated to empowering underserved communities 
+            through education, nutrition, healthcare, and sustainable development.
+          </p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="membership.html">Membership</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__col-title">Campaigns</h4>
+          <ul class="footer__links">
+            <li><a href="donate.html#education">Education for All</a></li>
+            <li><a href="donate.html#food">Zero Hunger Mission</a></li>
+            <li><a href="donate.html#medical">Healthcare Access</a></li>
+            <li><a href="donate.html#women">Women Empowerment</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__col-title">Legal & Policies</h4>
+          <ul class="footer__links">
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="payment-policy.html">Payment Policy</a></li>
+            <li><a href="refund-policy.html">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2024 Sahayata Foundation. All rights reserved. | Registered under the Societies Registration Act.</p>
+        <p>
+          <a href="terms.html">Terms</a> &nbsp;·&nbsp;
+          <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
+          <a href="payment-policy.html">Payment</a> &nbsp;·&nbsp;
+          <a href="refund-policy.html">Refund</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Scroll to top">↑</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

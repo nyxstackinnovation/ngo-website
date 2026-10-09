@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Become a member of Sahayata Foundation — Join our family to receive exclusive updates, event invitations, and contribute to our mission.">
+  <title>Membership Registration — Sahayata Foundation</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages/forms.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Sahayata Foundation Home">
+        <span class="header__logo-icon">🌿</span>
+        <span>Sahayata</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="about.html" class="nav__link">About Us</a></li>
+          <li><a href="donate.html" class="nav__link">Donate</a></li>
+          <li><a href="volunteer.html" class="nav__link">Volunteer</a></li>
+          <li><a href="membership.html" class="nav__link is-active">Membership</a></li>
+          <li><a href="donate.html" class="nav__link nav__cta btn btn--accent btn--sm">Donate Now</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <main>
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+      <div class="container page-hero__content">
+        <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>›</span><span>Membership</span>
+        </nav>
+        <h1 class="page-hero__title">Become a Member</h1>
+        <p class="page-hero__subtitle">
+          Join the Sahayata Foundation family. Get exclusive updates, invitations to events, 
+          and play an active role in shaping our mission and programs.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ MEMBERSHIP TIERS ============ -->
+    <section class="section--sm" id="tiers">
+      <div class="container">
+        <div class="tier-grid fade-in">
+          <div class="tier-card">
+            <div class="tier-card__badge">🌱</div>
+            <h3>General Member</h3>
+            <div class="tier-card__price">Free</div>
+            <ul>
+              <li>✓ Newsletter & impact reports</li>
+              <li>✓ Event invitations</li>
+              <li>✓ Volunteer priority access</li>
+              <li>✓ Community forum access</li>
+            </ul>
+          </div>
+          <div class="tier-card tier-card--featured">
+            <span class="tier-card__popular">Most Popular</span>
+            <div class="tier-card__badge">🌳</div>
+            <h3>Active Member</h3>
+            <div class="tier-card__price">₹500<span>/year</span></div>
+            <ul>
+              <li>✓ Everything in General</li>
+              <li>✓ Voting rights in AGM</li>
+              <li>✓ Priority project participation</li>
+              <li>✓ Official member ID card</li>
+              <li>✓ Annual impact certificate</li>
+            </ul>
+          </div>
+          <div class="tier-card">
+            <div class="tier-card__badge">🏆</div>
+            <h3>Patron Member</h3>
+            <div class="tier-card__price">₹2,000<span>/year</span></div>
+            <ul>
+              <li>✓ Everything in Active</li>
+              <li>✓ Advisory board access</li>
+              <li>✓ Name on annual report</li>
+              <li>✓ Exclusive field visit invites</li>
+              <li>✓ Direct founder interaction</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REGISTRATION FORM ============ -->
+    <section class="section form-section" id="register">
+      <div class="container">
+        <div class="form-layout">
+          <div class="form-sidebar fade-in">
+            <h2>Join Our Growing Family</h2>
+            <p>Fill out the membership form below. Our team will review your application 
+              and share the next steps via email within 3–5 working days.</p>
+
+            <div class="form-sidebar__info">
+              <h4>Member Benefits</h4>
+              <ul>
+                <li>📬 Regular newsletters and impact reports</li>
+                <li>🎪 Priority invitations to events and drives</li>
+                <li>🗳️ Participate in governance (Active & Patron)</li>
+                <li>🆔 Official membership ID and certificate</li>
+                <li>🤝 Connect with a community of changemakers</li>
+              </ul>
+            </div>
+
+            <div class="form-sidebar__contact">
+              <h4>Questions?</h4>
+              <p>Email: <strong>membership@sahayatafoundation.org</strong></p>
+              <p>Phone: <strong>+91 98765 43210</strong></p>
+            </div>
+          </div>
+
+          <div class="form-card card fade-in" data-delay="1">
+            <h3 class="form-card__title">Membership Registration Form</h3>
+            <div class="form-alert" style="display: none;"></div>
+
+            <form id="membershipForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="memName">Full Name <span class="required">*</span></label>
+                  <input type="text" id="memName" name="name" class="form-input"
+                         placeholder="Enter your full name" data-validate="required|minLength:3" required>
+                  <span class="form-error"></span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="memEmail">Email Address <span class="required">*</span></label>
+                  <input type="email" id="memEmail" name="email" class="form-input"
+                         placeholder="your@email.com" data-validate="required|email" required>
+                  <span class="form-error"></span>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="memPhone">Mobile Number <span class="required">*</span></label>
+                  <input type="tel" id="memPhone" name="phone" class="form-input"
+                         placeholder="10-digit mobile number" data-validate="required|phone" required>
+                  <span class="form-error"></span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="memDob">Date of Birth <span class="required">*</span></label>
+                  <input type="date" id="memDob" name="date_of_birth" class="form-input"
+                         data-validate="required" required>
+                  <span class="form-error"></span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="memAddress">Full Address <span class="required">*</span></label>
+                <textarea id="memAddress" name="address" class="form-textarea" rows="3"
+                          placeholder="House no., Street, Locality, City, State, PIN"
+                          data-validate="required|minLength:15" required></textarea>
+                <span class="form-error"></span>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="memPin">PIN Code <span class="required">*</span></label>
+                  <input type="text" id="memPin" name="pin_code" class="form-input"
+                         placeholder="6-digit PIN code" maxlength="6" data-validate="required|pin" required>
+                  <span class="form-error"></span>
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="memOccupation">Occupation</label>
+                  <input type="text" id="memOccupation" name="occupation" class="form-input"
+                         placeholder="Your profession / occupation">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="memTier">Membership Tier <span class="required">*</span></label>
+                <select id="memTier" name="membership_tier" class="form-select" data-validate="required" required>
+                  <option value="">Select membership tier</option>
+                  <option value="general">General Member (Free)</option>
+                  <option value="active">Active Member (₹500/year)</option>
+                  <option value="patron">Patron Member (₹2,000/year)</option>
+                </select>
+                <span class="form-error"></span>
+                <p class="form-hint">Paid membership fees can be sent via UPI after form submission.</p>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="memMotivation">Why do you want to become a member?</label>
+                <textarea id="memMotivation" name="motivation" class="form-textarea"
+                          placeholder="Tell us about your interest in joining Sahayata Foundation..."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label class="form-checkbox">
+                  <input type="checkbox" name="terms_accepted" data-validate="checked" required>
+                  <span>I agree to the <a href="terms.html" target="_blank">Terms & Conditions</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>. <span class="required">*</span></span>
+                </label>
+                <span class="form-error"></span>
+              </div>
+
+              <button type="submit" class="btn btn--primary btn--lg btn--full" id="memSubmitBtn">
+                Submit Membership Application
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name"><span>🌿</span> Sahayata Foundation</div>
+          <p>A registered non-profit organization dedicated to empowering underserved communities through education, nutrition, healthcare, and sustainable development.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="membership.html">Membership</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Campaigns</h4>
+          <ul class="footer__links">
+            <li><a href="donate.html#education">Education for All</a></li>
+            <li><a href="donate.html#food">Zero Hunger Mission</a></li>
+            <li><a href="donate.html#medical">Healthcare Access</a></li>
+            <li><a href="donate.html#women">Women Empowerment</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Legal & Policies</h4>
+          <ul class="footer__links">
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="payment-policy.html">Payment Policy</a></li>
+            <li><a href="refund-policy.html">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Sahayata Foundation. All rights reserved.</p>
+        <p><a href="terms.html">Terms</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy</a> &nbsp;·&nbsp; <a href="payment-policy.html">Payment</a> &nbsp;·&nbsp; <a href="refund-policy.html">Refund</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Scroll to top">↑</button>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // REPLACE this endpoint with your actual form service URL
+      const FORM_ENDPOINT = 'https://your-form-service.com/membership';
+
+      FormValidator.init('#membershipForm', (form) => {
+        FormSubmitter.submit(form, FORM_ENDPOINT);
+      });
+    });
+  </script>
+</body>
+</html>

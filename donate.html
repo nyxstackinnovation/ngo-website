@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Donate to Sahayata Foundation — Support education, food, healthcare campaigns or make a general donation. UPI, QR code, and bank transfer accepted.">
+  <title>Donate — Sahayata Foundation</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/pages/donate.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="index.html" class="header__logo" aria-label="Sahayata Foundation Home">
+        <span class="header__logo-icon">🌿</span>
+        <span>Sahayata</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="about.html" class="nav__link">About Us</a></li>
+          <li><a href="donate.html" class="nav__link is-active">Donate</a></li>
+          <li><a href="volunteer.html" class="nav__link">Volunteer</a></li>
+          <li><a href="membership.html" class="nav__link">Membership</a></li>
+          <li><a href="donate.html" class="nav__link nav__cta btn btn--accent btn--sm">Donate Now</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+    </div>
+    <div class="nav-overlay" id="navOverlay"></div>
+  </header>
+
+  <main>
+    <!-- ============ PAGE HERO ============ -->
+    <section class="page-hero">
+      <div class="container page-hero__content">
+        <nav class="page-hero__breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a><span>›</span><span>Donate</span>
+        </nav>
+        <h1 class="page-hero__title">Make a Donation</h1>
+        <p class="page-hero__subtitle">
+          Your generosity directly funds education, meals, healthcare, and empowerment programs. 
+          Every rupee counts. All donations are eligible for 80G tax deduction.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ DONATION TYPE TOGGLE ============ -->
+    <section class="section" id="donate-section">
+      <div class="container">
+        <div class="donate-toggle fade-in">
+          <button class="donate-toggle__btn is-active" data-tab="campaign" id="toggleCampaign">
+            🎯 Campaign Donation
+          </button>
+          <button class="donate-toggle__btn" data-tab="general" id="toggleGeneral">
+            💚 General Donation
+          </button>
+        </div>
+
+        <!-- ======= CAMPAIGN DONATION ======= -->
+        <div class="donate-panel" id="panelCampaign">
+          <div class="section-header fade-in">
+            <h2 class="section-header__title">Support a Specific Campaign</h2>
+            <p class="section-header__subtitle">
+              Choose a cause close to your heart and see exactly where your money goes.
+            </p>
+          </div>
+
+          <div class="campaign-donate-grid">
+            <!-- Education -->
+            <div class="campaign-donate-card card fade-in" id="education">
+              <div class="campaign-donate-card__header" style="background: linear-gradient(135deg, #e8f5e9, #c8e6c9);">
+                <span class="campaign-donate-card__emoji">🎓</span>
+                <h3>Education for All</h3>
+                <p>Help children get the education they deserve</p>
+              </div>
+              <div class="campaign-donate-card__body">
+                <div class="donate-amounts" data-campaign="education">
+                  <button class="donate-amount-btn" data-amount="500">₹500</button>
+                  <button class="donate-amount-btn" data-amount="1000">₹1,000</button>
+                  <button class="donate-amount-btn is-active" data-amount="2500">₹2,500</button>
+                  <button class="donate-amount-btn" data-amount="5000">₹5,000</button>
+                </div>
+                <div class="donate-custom">
+                  <label class="form-label" for="customAmtEducation">Or enter custom amount</label>
+                  <div class="donate-custom__input-wrap">
+                    <span class="donate-custom__currency">₹</span>
+                    <input type="number" id="customAmtEducation" class="form-input donate-custom__input" 
+                           placeholder="Enter amount" min="100" data-campaign="education">
+                  </div>
+                </div>
+                <div class="donate-impact">
+                  <p class="donate-impact__text">
+                    <strong>₹2,500</strong> can provide school supplies for 5 children for a month.
+                  </p>
+                </div>
+                <a href="#payment-section" class="btn btn--primary btn--full donate-proceed-btn" 
+                   data-campaign="education" data-default="2500">
+                  Proceed to Donate ₹2,500 →
+                </a>
+              </div>
+            </div>
+
+            <!-- Food -->
+            <div class="campaign-donate-card card fade-in" data-delay="1" id="food">
+              <div class="campaign-donate-card__header" style="background: linear-gradient(135deg, #fff3e0, #ffe0b2);">
+                <span class="campaign-donate-card__emoji">🍲</span>
+                <h3>Zero Hunger Mission</h3>
+                <p>Feed a family, fight malnutrition</p>
+              </div>
+              <div class="campaign-donate-card__body">
+                <div class="donate-amounts" data-campaign="food">
+                  <button class="donate-amount-btn" data-amount="250">₹250</button>
+                  <button class="donate-amount-btn" data-amount="500">₹500</button>
+                  <button class="donate-amount-btn is-active" data-amount="1000">₹1,000</button>
+                  <button class="donate-amount-btn" data-amount="2500">₹2,500</button>
+                </div>
+                <div class="donate-custom">
+                  <label class="form-label" for="customAmtFood">Or enter custom amount</label>
+                  <div class="donate-custom__input-wrap">
+                    <span class="donate-custom__currency">₹</span>
+                    <input type="number" id="customAmtFood" class="form-input donate-custom__input"
+                           placeholder="Enter amount" min="100" data-campaign="food">
+                  </div>
+                </div>
+                <div class="donate-impact">
+                  <p class="donate-impact__text">
+                    <strong>₹1,000</strong> can provide nutritious meals for 20 children for a week.
+                  </p>
+                </div>
+                <a href="#payment-section" class="btn btn--primary btn--full donate-proceed-btn" 
+                   data-campaign="food" data-default="1000">
+                  Proceed to Donate ₹1,000 →
+                </a>
+              </div>
+            </div>
+
+            <!-- Medical -->
+            <div class="campaign-donate-card card fade-in" data-delay="2" id="medical">
+              <div class="campaign-donate-card__header" style="background: linear-gradient(135deg, #e3f2fd, #bbdefb);">
+                <span class="campaign-donate-card__emoji">🏥</span>
+                <h3>Healthcare Access</h3>
+                <p>Enable medical care for remote villages</p>
+              </div>
+              <div class="campaign-donate-card__body">
+                <div class="donate-amounts" data-campaign="medical">
+                  <button class="donate-amount-btn" data-amount="500">₹500</button>
+                  <button class="donate-amount-btn is-active" data-amount="1000">₹1,000</button>
+                  <button class="donate-amount-btn" data-amount="2500">₹2,500</button>
+                  <button class="donate-amount-btn" data-amount="5000">₹5,000</button>
+                </div>
+                <div class="donate-custom">
+                  <label class="form-label" for="customAmtMedical">Or enter custom amount</label>
+                  <div class="donate-custom__input-wrap">
+                    <span class="donate-custom__currency">₹</span>
+                    <input type="number" id="customAmtMedical" class="form-input donate-custom__input"
+                           placeholder="Enter amount" min="100" data-campaign="medical">
+                  </div>
+                </div>
+                <div class="donate-impact">
+                  <p class="donate-impact__text">
+                    <strong>₹1,000</strong> can cover a complete health check-up for 10 villagers.
+                  </p>
+                </div>
+                <a href="#payment-section" class="btn btn--primary btn--full donate-proceed-btn" 
+                   data-campaign="medical" data-default="1000">
+                  Proceed to Donate ₹1,000 →
+                </a>
+              </div>
+            </div>
+
+            <!-- Women -->
+            <div class="campaign-donate-card card fade-in" data-delay="3" id="women">
+              <div class="campaign-donate-card__header" style="background: linear-gradient(135deg, #fce4ec, #f8bbd0);">
+                <span class="campaign-donate-card__emoji">👩‍💼</span>
+                <h3>Women Empowerment</h3>
+                <p>Support skill training & micro-finance</p>
+              </div>
+              <div class="campaign-donate-card__body">
+                <div class="donate-amounts" data-campaign="women">
+                  <button class="donate-amount-btn" data-amount="500">₹500</button>
+                  <button class="donate-amount-btn is-active" data-amount="1000">₹1,000</button>
+                  <button class="donate-amount-btn" data-amount="2500">₹2,500</button>
+                  <button class="donate-amount-btn" data-amount="5000">₹5,000</button>
+                </div>
+                <div class="donate-custom">
+                  <label class="form-label" for="customAmtWomen">Or enter custom amount</label>
+                  <div class="donate-custom__input-wrap">
+                    <span class="donate-custom__currency">₹</span>
+                    <input type="number" id="customAmtWomen" class="form-input donate-custom__input"
+                           placeholder="Enter amount" min="100" data-campaign="women">
+                  </div>
+                </div>
+                <div class="donate-impact">
+                  <p class="donate-impact__text">
+                    <strong>₹1,000</strong> can sponsor a woman's vocational training for a week.
+                  </p>
+                </div>
+                <a href="#payment-section" class="btn btn--primary btn--full donate-proceed-btn" 
+                   data-campaign="women" data-default="1000">
+                  Proceed to Donate ₹1,000 →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ======= GENERAL DONATION ======= -->
+        <div class="donate-panel is-hidden" id="panelGeneral">
+          <div class="general-donate fade-in">
+            <div class="general-donate__content">
+              <h2>Support Our Overall Mission</h2>
+              <p>
+                Your general donation helps us allocate funds where they're needed most — 
+                emergency relief, operational costs, new program launches, and scaling our 
+                existing campaigns across more communities.
+              </p>
+
+              <div class="donate-amounts" data-campaign="general">
+                <button class="donate-amount-btn" data-amount="500">₹500</button>
+                <button class="donate-amount-btn" data-amount="1000">₹1,000</button>
+                <button class="donate-amount-btn is-active" data-amount="2500">₹2,500</button>
+                <button class="donate-amount-btn" data-amount="5000">₹5,000</button>
+                <button class="donate-amount-btn" data-amount="10000">₹10,000</button>
+                <button class="donate-amount-btn" data-amount="25000">₹25,000</button>
+              </div>
+              <div class="donate-custom">
+                <label class="form-label" for="customAmtGeneral">Or enter custom amount</label>
+                <div class="donate-custom__input-wrap">
+                  <span class="donate-custom__currency">₹</span>
+                  <input type="number" id="customAmtGeneral" class="form-input donate-custom__input"
+                         placeholder="Enter amount" min="100" data-campaign="general">
+                </div>
+              </div>
+              <a href="#payment-section" class="btn btn--accent btn--lg btn--full donate-proceed-btn"
+                 data-campaign="general" data-default="2500">
+                Proceed to Donate ₹2,500 →
+              </a>
+            </div>
+
+            <div class="general-donate__sidebar card card--flat">
+              <h4>Why General Donations Matter</h4>
+              <ul class="general-donate__reasons">
+                <li>
+                  <span class="general-donate__check">✓</span>
+                  Funds emergency relief and disaster response
+                </li>
+                <li>
+                  <span class="general-donate__check">✓</span>
+                  Helps launch new programs in underserved areas
+                </li>
+                <li>
+                  <span class="general-donate__check">✓</span>
+                  Covers operational costs to keep programs running
+                </li>
+                <li>
+                  <span class="general-donate__check">✓</span>
+                  Allows flexible allocation to areas of greatest need
+                </li>
+                <li>
+                  <span class="general-donate__check">✓</span>
+                  100% tax deductible under Section 80G
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PAYMENT SECTION ============ -->
+    <section class="section payment-section" id="payment-section">
+      <div class="container">
+        <div class="section-header fade-in">
+          <span class="section-header__badge">💳 Payment Details</span>
+          <h2 class="section-header__title">Complete Your Donation</h2>
+          <p class="section-header__subtitle">
+            We accept payments via UPI (Google Pay, PhonePe, Paytm, etc.) and bank transfer. 
+            All transactions are secure and verified manually.
+          </p>
+        </div>
+
+        <div class="payment-grid">
+          <!-- UPI QR Code -->
+          <div class="payment-card card fade-in">
+            <h3 class="payment-card__title">📱 Scan QR Code</h3>
+            <div class="payment-card__qr">
+              <div class="payment-card__qr-placeholder">
+                <span>📱</span>
+                <p>UPI QR Code</p>
+                <small>Replace with NGO's official UPI QR code image</small>
+              </div>
+            </div>
+            <p class="payment-card__note">
+              Open any UPI app → Scan this QR → Enter amount → Complete payment
+            </p>
+          </div>
+
+          <!-- UPI ID -->
+          <div class="payment-card card fade-in" data-delay="1">
+            <h3 class="payment-card__title">🔗 UPI ID</h3>
+            <div class="payment-card__upi-id">
+              <code id="upiId">sahayatafoundation@upi</code>
+              <button class="btn btn--ghost btn--sm" id="copyUpiBtn" aria-label="Copy UPI ID">
+                📋 Copy
+              </button>
+            </div>
+            <p class="payment-card__upi-hint">
+              <strong>Verified UPI ID</strong> — Use this ID in any UPI app to send your donation directly.
+            </p>
+
+            <hr class="divider">
+
+            <h4 class="payment-card__subtitle">🏦 Bank Transfer</h4>
+            <div class="payment-card__bank-details">
+              <div class="bank-detail">
+                <strong>Account Name</strong>
+                <span>Sahayata Foundation</span>
+              </div>
+              <div class="bank-detail">
+                <strong>Account Number</strong>
+                <span>XXXX XXXX XXXX XXXX</span>
+              </div>
+              <div class="bank-detail">
+                <strong>IFSC Code</strong>
+                <span>XXXX0XXXXXX</span>
+              </div>
+              <div class="bank-detail">
+                <strong>Bank Name</strong>
+                <span>State Bank of India</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Instructions -->
+          <div class="payment-card card fade-in" data-delay="2">
+            <h3 class="payment-card__title">📋 How to Donate</h3>
+            <ol class="payment-steps">
+              <li>
+                <span class="payment-step__num">1</span>
+                <div>
+                  <strong>Choose amount</strong>
+                  <p>Select a suggested amount or enter a custom amount above.</p>
+                </div>
+              </li>
+              <li>
+                <span class="payment-step__num">2</span>
+                <div>
+                  <strong>Make payment</strong>
+                  <p>Scan the QR code or use the UPI ID / bank transfer details.</p>
+                </div>
+              </li>
+              <li>
+                <span class="payment-step__num">3</span>
+                <div>
+                  <strong>Save screenshot</strong>
+                  <p>Take a screenshot of your payment confirmation for your records.</p>
+                </div>
+              </li>
+              <li>
+                <span class="payment-step__num">4</span>
+                <div>
+                  <strong>Share with us (optional)</strong>
+                  <p>Email your receipt to <strong>donate@sahayatafoundation.org</strong> for a tax receipt.</p>
+                </div>
+              </li>
+            </ol>
+
+            <div class="alert alert--info" style="margin-top: var(--space-lg);">
+              <span>ℹ️</span>
+              <div>
+                <strong>80G Tax Benefit:</strong> All donations are eligible for tax deduction under Section 80G. 
+                Email your payment confirmation to receive your 80G receipt.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST SIGNALS ============ -->
+    <section class="section--sm trust-section">
+      <div class="container">
+        <div class="trust-grid fade-in">
+          <div class="trust-item">
+            <span class="trust-item__icon">🔒</span>
+            <strong>100% Secure</strong>
+            <span>All UPI transactions are encrypted</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__icon">📜</span>
+            <strong>80G Certified</strong>
+            <span>Tax-deductible donations</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__icon">📊</span>
+            <strong>Transparent</strong>
+            <span>Regular impact reports shared</span>
+          </div>
+          <div class="trust-item">
+            <span class="trust-item__icon">✅</span>
+            <strong>Verified NGO</strong>
+            <span>Registered on NGO Darpan</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-name"><span>🌿</span> Sahayata Foundation</div>
+          <p>A registered non-profit organization dedicated to empowering underserved communities through education, nutrition, healthcare, and sustainable development.</p>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook">📘</a>
+            <a href="#" aria-label="Twitter">🐦</a>
+            <a href="#" aria-label="Instagram">📸</a>
+            <a href="#" aria-label="YouTube">▶️</a>
+          </div>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Quick Links</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="membership.html">Membership</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Campaigns</h4>
+          <ul class="footer__links">
+            <li><a href="donate.html#education">Education for All</a></li>
+            <li><a href="donate.html#food">Zero Hunger Mission</a></li>
+            <li><a href="donate.html#medical">Healthcare Access</a></li>
+            <li><a href="donate.html#women">Women Empowerment</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer__col-title">Legal & Policies</h4>
+          <ul class="footer__links">
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="payment-policy.html">Payment Policy</a></li>
+            <li><a href="refund-policy.html">Refund Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Sahayata Foundation. All rights reserved.</p>
+        <p>
+          <a href="terms.html">Terms</a> &nbsp;·&nbsp;
+          <a href="privacy.html">Privacy</a> &nbsp;·&nbsp;
+          <a href="payment-policy.html">Payment</a> &nbsp;·&nbsp;
+          <a href="refund-policy.html">Refund</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Scroll to top">↑</button>
+
+  <script src="js/main.js"></script>
+  <script src="js/donate.js"></script>
+</body>
+</html>

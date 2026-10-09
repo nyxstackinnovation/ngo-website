@@ -1,0 +1,110 @@
+/* ============================================
+   POLICY / LEGAL PAGES — Shared Styles
+   Used by: terms, privacy, payment-policy, refund-policy
+   ============================================ */
+
+.policy-content {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: var(--space-3xl) 0;
+}
+
+.policy-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  padding: var(--space-3xl);
+}
+
+.policy-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  flex-wrap: wrap;
+  padding-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--divider);
+  margin-bottom: var(--space-2xl);
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+.policy-meta strong {
+  color: var(--text-primary);
+}
+
+.policy-card h2 {
+  font-size: var(--fs-xl);
+  font-weight: var(--fw-bold);
+  color: var(--text-primary);
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 2px solid var(--primary-light);
+}
+
+.policy-card h3 {
+  font-size: var(--fs-lg);
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-sm);
+}
+
+.policy-card p {
+  font-size: var(--fs-base);
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-md);
+}
+
+.policy-card ul,
+.policy-card ol {
+  margin-bottom: var(--space-lg);
+  padding-left: var(--space-xl);
+}
+.policy-card ul { list-style: disc; }
+.policy-card ol { list-style: decimal; }
+
+.policy-card li {
+  font-size: var(--fs-base);
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+  margin-bottom: var(--space-sm);
+}
+
+.policy-card a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.policy-card strong {
+  font-weight: var(--fw-semibold);
+  color: var(--text-primary);
+}
+
+.policy-card .alert {
+  margin: var(--space-xl) 0;
+}
+
+.policy-contact {
+  margin-top: var(--space-2xl);
+  padding: var(--space-xl);
+  background: var(--primary-light);
+  border-radius: var(--radius-lg);
+}
+.policy-contact h3 {
+  margin-top: 0;
+}
+.policy-contact p {
+  margin-bottom: var(--space-xs);
+}
+
+@media (max-width: 768px) {
+  .policy-card {
+    padding: var(--space-xl);
+  }
+  .policy-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+}
